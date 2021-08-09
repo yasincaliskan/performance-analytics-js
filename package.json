@@ -1,0 +1,19 @@
+{
+  "name": "performance-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasincaliskan/performance-analytics-js.git"
+  },
+  "author": "Yasin Caliskan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasincaliskan/performance-analytics-js/issues"
+  },
+  "homepage": "https://github.com/yasincaliskan/performance-analytics-js#readme"
+}
