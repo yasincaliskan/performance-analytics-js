@@ -46,4 +46,4 @@ function performanceAnalyzer({
 
 }
 
-export {performanceAnalyzer};
+export default performanceAnalyzer;
