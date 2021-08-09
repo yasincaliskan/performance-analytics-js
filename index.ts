@@ -17,10 +17,10 @@ function calculateWindowLoad(performance: Performance) {
 }
 
 function sendPerformanceMetrics(
-  url: string, 
+  url: string,
   data: {
-    TTFB: number,
-    FCP: number,
+    ttfb: number,
+    fcp: number,
     domLoad: number,
     windowLoad: number
   }) {
@@ -32,18 +32,19 @@ function sendPerformanceMetrics(
 }
 
 function performanceAnalyzer({
-  url = "http://localhost:3030/api/analytics/statistics/"}
+  url = "http://localhost:3001/analytics/create-statistics/"}
   : {url: string}) {
-  const performance = window.performance;
-  const analytics = {
-    TTFB: calculateTTFB(performance),
-    FCP: calculateFCB(performance),
-    domLoad: calculateDomLoad(performance),
-    windowLoad: calculateWindowLoad(performance)
+  window.onload = () => {
+    const performance = window.performance;
+    const analytics = {
+      ttfb: calculateTTFB(performance),
+      fcp: calculateFCB(performance),
+      domLoad: calculateDomLoad(performance),
+      windowLoad: calculateWindowLoad(performance)
+    };
+
+    sendPerformanceMetrics(url, analytics);
   };
-
-  sendPerformanceMetrics(url, analytics);
-
 }
 
 export default performanceAnalyzer;
