@@ -1,10 +1,11 @@
 {
-  "name": "performance-analytics",
+  "name": "@yaskopolo/performance-analytics",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/yasincaliskan/performance-analytics-js/issues"
   },
-  "homepage": "https://github.com/yasincaliskan/performance-analytics-js#readme"
+  "homepage": "https://github.com/yasincaliskan/performance-analytics-js#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  }
 }
